@@ -1,0 +1,8 @@
+<div class="mt-5">
+  <h4>List of Customers</h4>
+  <div *ngFor="let customer of customers$ | async; let i = index">
+    <span>{{ i + 1 }}.</span> {{ customer.name }}
+    <i class="bi bi-pencil-square" (click)="editCust(customer)"></i>
+    <i class="bi bi-trash" (click)="removeCust(customer)"></i>
+  </div>
+</div>
